@@ -1,8 +1,8 @@
 {
-  "name": "nabta",
+  "name": "nabta-pro",
   "private": true,
   "version": "1.0.0",
-  "description": "نبتة — منصة التحقق من الأفكار الريادية بالذكاء الاصطناعي",
+  "description": "نبتة — مستشار الأعمال الذكي (نسخة React)",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.0"
+    "vite": "^5.4.11"
   }
 }

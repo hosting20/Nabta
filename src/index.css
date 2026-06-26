@@ -1,0 +1,107 @@
+:root {
+  --g50: #eef7f0;
+  --g100: #d7ecdd;
+  --g500: #3f9e68;
+  --g600: #2f8456;
+  --g700: #236b44;
+  --g900: #143f2a;
+  --ink: #15271c;
+  --soft: #5f7569;
+  --line: #e2ede6;
+  --field: #f7fbf8;
+  --amberbg: #f7e8cf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  background: radial-gradient(125% 70% at 50% -8%, #e4f3e9 0%, #f5faf6 46%, #f5faf6 100%);
+}
+
+::placeholder {
+  color: #9db3a8;
+  opacity: 1;
+}
+
+textarea,
+input,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes nb-rise {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes nb-grow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(2deg);
+  }
+}
+
+@keyframes nb-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nb-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media print {
+  .nb-noprint {
+    display: none !important;
+  }
+  .nb-report {
+    box-shadow: none !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
